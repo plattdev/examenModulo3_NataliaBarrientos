@@ -148,13 +148,13 @@ function seleccionarRespuesta(indiceSeleccionado) {
 
         // Marcar la respuesta correcta en verde
         if (index === pregunta.respuestaCorrecta) {
-            boton.style.backgroundColor = 'green';
+            boton.style.backgroundColor = 'darkgreen';
             boton.style.color = 'white';
         }
 
         // Marcar la respuesta incorrecta seleccionada en rojo
         if (index === indiceSeleccionado && !esCorrecta) {
-            boton.style.backgroundColor = 'red';
+            boton.style.backgroundColor = 'lightcoral';
             boton.style.color = 'white';
         }
     });
@@ -164,7 +164,7 @@ function seleccionarRespuesta(indiceSeleccionado) {
     if (esCorrecta) {
         feedbackContenedor.innerHTML = '<p style="color: green;">¡Correcto! ✓</p>';
     } else {
-        feedbackContenedor.innerHTML = '<p style="color: red;">Incorrecto ✗</p>';
+        feedbackContenedor.innerHTML = '<p style="color: lightcoral;">Incorrecto ✗</p>';
     }
 
     // Mostrar botón siguiente

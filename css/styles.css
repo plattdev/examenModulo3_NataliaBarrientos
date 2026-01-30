@@ -7,9 +7,50 @@
 
 /* ==================== VARIABLES==================== */
 :root {
+  --fuente-principal: "Roboto", sans-serif;
+  --color-fondo: #f5f5f5;
+  --color-texto: #714613;
 }
 
 /* ==================== ESTILO ==================== */
+
+body {
+  font-family: var(--fuente-principal);
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  height: 100dvh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url(../img/guitarraBg.avif);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+h1 {
+  font-size: 1.8rem;
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
+}
+
+h2 {
+  font-size: 1.5rem;
+  color: rgb(235, 235, 235);
+}
+
+header {
+  text-align: center;
+  margin-top: 15vh;
+  margin-bottom: 30px;
+}
+
+#app {
+  width: 100%;
+  max-width: 600px;
+  padding: 20px;
+  text-align: center;
+}
 
 /* ===== BARRA DE PROGRESO ===== */
 #progreso-contenedor {
@@ -24,7 +65,7 @@
 
 #progreso-barra {
   height: 100%;
-  background-color: #4caf50;
+  background-color: #74a276;
   border-radius: 10px;
   transition: width 0.3s ease;
 }
@@ -37,4 +78,86 @@
   font-weight: bold;
   font-size: 16px;
   color: #333;
+}
+
+/* ===== BOTONES DE OPCIONES ===== */
+#opciones-contenedor {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.opcion-btn {
+  padding: 15px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  background-color: #fff;
+  color: var(--color-texto);
+  cursor: pointer;
+  min-height: 50px;
+}
+
+.opcion-btn:hover {
+  background-color: #e0e0e0;
+}
+
+/* ===== BOTÓN SIGUIENTE ===== */
+#siguiente-btn {
+  margin-top: 20px;
+  padding: 12px 30px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  background-color: #74a276;
+  color: white;
+  cursor: pointer;
+}
+
+#siguiente-btn:hover {
+  background-color: #5d8a5f;
+}
+
+/* ===== PANTALLA DE RESULTADOS ===== */
+#resultados-contenedor {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  max-width: 500px;
+}
+
+#resultados-contenedor h2 {
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: var(--color-texto);
+}
+
+#resultados-contenedor p {
+  font-size: 18px;
+  margin: 15px 0;
+  color: #333;
+}
+
+#resultados-contenedor p strong {
+  color: var(--color-texto);
+}
+
+#reiniciar-btn {
+  margin-top: 30px;
+  padding: 15px 40px;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  background-color: #74a276;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#reiniciar-btn:hover {
+  background-color: #5d8a5f;
 }
