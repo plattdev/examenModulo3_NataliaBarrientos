@@ -3,11 +3,38 @@
 @import url(reset.css);
 
 /* FONTS */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 
 /* ==================== VARIABLES==================== */
 :root {
-
 }
 
 /* ==================== ESTILO ==================== */
+
+/* ===== BARRA DE PROGRESO ===== */
+#progreso-contenedor {
+  width: 100%;
+  max-width: 500px;
+  height: 20px;
+  background-color: #e0e0e0;
+  border-radius: 10px;
+  margin: 20px auto;
+  position: relative;
+}
+
+#progreso-barra {
+  height: 100%;
+  background-color: #4caf50;
+  border-radius: 10px;
+  transition: width 0.3s ease;
+}
+
+#progreso-texto {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+  font-size: 16px;
+  color: #333;
+}
